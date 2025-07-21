@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Saída Liberada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      color: #2e7d32;
+      font-size: 36px;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 250px;
+      height: auto;
+    }
+
+    #hora {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Saída Liberada</h1>
+  <img src="https://drive.google.com/uc?export=view&id=1v3IADqV6s683fG9SdqFyKVnZy2_aLJNR" alt="QR Code">
+
+  <div id="hora"></div>
+
+  <script>
+    function atualizarHora() {
+      const agora = new Date();
+      const dataHora = agora.toLocaleString("pt-BR", {
+        dateStyle: "short",
+        timeStyle: "medium"
+      });
+      document.getElementById("hora").textContent = `Data e Hora: ${dataHora}`;
+    }
+
+    atualizarHora();
+    setInterval(atualizarHora, 1000); // Atualiza a cada segundo
+  </script>
+</body>
+</html>
