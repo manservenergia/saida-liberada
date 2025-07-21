@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Saída Liberada</title>
   <style>
     body {
@@ -31,7 +31,9 @@
 </head>
 <body>
   <h1>Saída Liberada</h1>
-  <img src="https://drive.google.com/uc?export=view&id=1v3IADqV6s683fG9SdqFyKVnZy2_aLJNR" alt="QR Code">
+
+  <!-- Imagem QR Code -->
+  <img src="https://manservenergia.github.io/saida-liberada/liberacao-saida.png" alt="QR Code" />
 
   <div id="hora"></div>
 
@@ -40,13 +42,13 @@
       const agora = new Date();
       const dataHora = agora.toLocaleString("pt-BR", {
         dateStyle: "short",
-        timeStyle: "medium"
+        timeStyle: "medium",
       });
       document.getElementById("hora").textContent = `Data e Hora: ${dataHora}`;
     }
 
     atualizarHora();
-    setInterval(atualizarHora, 1000); // Atualiza a cada segundo
+    setInterval(atualizarHora, 1000);
   </script>
 </body>
 </html>
